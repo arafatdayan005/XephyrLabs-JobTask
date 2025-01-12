@@ -10,13 +10,12 @@ import { useDispatch } from "react-redux";
 const ProtectedRoute = ({ children }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  //const token = localStorage.getItem("token");
-const token = "sfdgs"
-  useEffect(() => {
-    
+  const token = localStorage.getItem("token");
+  
+  useEffect(() => {    
     if (token) {
-      // const decode = jwtDecode(token);
-      // dispatch(setUser({ user: decode, token: token }));
+      const decode = jwtDecode(token);
+      dispatch(setUser({ user: decode, token: token }));
     }
   }, [dispatch, navigate, token]);
 

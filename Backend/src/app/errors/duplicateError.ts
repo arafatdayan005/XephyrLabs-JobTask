@@ -9,7 +9,7 @@ const DuplicateError = (
   const issues: TErrorIssue[] = [
     {
       path: '',
-      message: `Duplicate value for ${matches![1]}`,
+      message: `${matches![1]} is already registered`,
     },
   ];
 

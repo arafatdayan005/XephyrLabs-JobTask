@@ -6,7 +6,7 @@ import AuthError from '../../errors/authError';
 
 const loginUser = async (payload: loginUser) => {
   const user = await userModel
-    .findOne({ username: payload?.username })
+    .findOne({ email: payload?.email })
     .select('+password');
 
   if (!user) {
