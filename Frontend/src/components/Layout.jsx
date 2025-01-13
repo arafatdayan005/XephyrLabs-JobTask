@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { logout, useCurrentUser } from "../redux/features/auth/authSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { logout} from "../redux/features/auth/authSlice";
+import { useDispatch } from "react-redux";
 
 const RouteLink = ({ href, children }) => {
   return (
@@ -21,11 +21,8 @@ const RouteLink = ({ href, children }) => {
 
 function Layout() {
   const [isSideNavOpen, setIsSideNavOpen] = useState(true);
-  const user = useSelector(useCurrentUser);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  console.log(user);
 
   const handleLogout = () => {
     localStorage.removeItem("token");

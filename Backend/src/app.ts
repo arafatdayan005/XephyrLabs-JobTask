@@ -3,6 +3,7 @@ import cors from 'cors';
 import globalErrorHandler from './app/errors/globalErrorHandler';
 import { UserRoutes } from './app/modules/User/user.route';
 import { AuthRoutes } from './app/modules/Auth/auth.route';
+import { ProductRoutes } from './app/modules/Product/product.route';
 
 const app: Application = express();
 
@@ -13,6 +14,7 @@ app.use(cors());
 //application routes
 app.use('/user', UserRoutes);
 app.use('/auth', AuthRoutes);
+app.use('/product', ProductRoutes);
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Server is running!');
