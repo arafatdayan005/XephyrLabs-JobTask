@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { logout} from "../redux/features/auth/authSlice";
+import { logout } from "../redux/features/auth/authSlice";
 import { useDispatch } from "react-redux";
 
 const RouteLink = ({ href, children }) => {
@@ -9,8 +9,8 @@ const RouteLink = ({ href, children }) => {
     <NavLink
       className={({ isActive }) =>
         isActive
-          ? "flex items-center gap-3 rounded-lg p-3 transition-colors hover:text-white text-sm duration-300 bg-red-400 text-white hover:bg-red-400"
-          : "flex items-center gap-3 rounded-lg p-3 transition-colors hover:text-white text-sm duration-300 text-[#a6b0cf] hover:bg-red-400/50"
+          ? "flex items-center gap-3 rounded-lg p-3 transition-colors hover:text-white text-sm duration-300 bg-pink-400 text-white hover:bg-pink-400"
+          : "flex items-center gap-3 rounded-lg p-3 transition-colors hover:text-white text-sm duration-300 text-[#a6b0cf] hover:bg-pink-400/50"
       }
       to={href}
     >
@@ -65,7 +65,7 @@ function Layout() {
       <aside
         id="nav-menu-1"
         aria-label="Side navigation"
-        className={`fixed top-0 lg:top-0 bottom-0 left-0 z-40 flex w-64 flex-col border-r border-r-slate-200 bg-red-200 transition-transform lg:translate-x-0 duration-500 ${
+        className={`fixed top-0 lg:top-0 bottom-0 left-0 z-40 flex w-64 flex-col border-r border-r-slate-200 bg-pink-200 transition-transform lg:translate-x-0 duration-500 ${
           isSideNavOpen ? "translate-x-0" : " -translate-x-full"
         }`}
       >
@@ -80,7 +80,7 @@ function Layout() {
             height={40}
             alt="Logo"
           />
-          <p className=" text-red-500 font-bold text-2xl uppercase tracking-[0.1em]">
+          <p className="text-red-500 font-bold text-2xl uppercase tracking-[0.1em]">
             Tstore
           </p>
         </Link>

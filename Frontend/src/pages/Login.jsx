@@ -30,13 +30,13 @@ const Login = () => {
       localStorage.setItem("token", res.data.data.token);
 
       dispatch(setUser({ user: decode, token: res.data.token }));
-      navigate("/");      
+      navigate("/");
     }
   };
 
   return (
     <>
-      <div className="bg-white dark:bg-black/90 h-screen flex justify-center items-center">
+      <div className="bg-white dark:bg-black/90 h-screen flex justify-center items-center px-8">
         <div className="w-full lg:w-1/4 bg-white/30 border border-pink-200 rounded-xl shadow-lg dark:bg-neutral-900 dark:border-neutral-700">
           <div className="p-4 sm:p-7">
             <div className="text-center">

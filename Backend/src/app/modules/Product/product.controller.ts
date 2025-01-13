@@ -31,10 +31,10 @@ const getAllProduct = catchAsync(async (req: Request, res: Response) => {
 });
 
 const updateProduct = catchAsync(async (req: Request, res: Response) => {
-  const { ProductId } = req.params;
+  const { productId } = req.params;
 
   const result = await productServices.updateProductIntoDB(
-    new Types.ObjectId(ProductId),
+    new Types.ObjectId(productId),
     req.body
   );
 
@@ -47,10 +47,10 @@ const updateProduct = catchAsync(async (req: Request, res: Response) => {
 });
 
 const deleteProduct = catchAsync(async (req: Request, res: Response) => {
-  const { ProductId } = req.params;
+  const { productId } = req.params;
 
   const result = await productServices.deleteProductFromDB(
-    new Types.ObjectId(ProductId)
+    new Types.ObjectId(productId)
   );
 
   successResponse(res, {

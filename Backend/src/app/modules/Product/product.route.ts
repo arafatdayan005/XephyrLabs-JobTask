@@ -24,7 +24,7 @@ router.post(
   validateRequest(productValidationSchema),
   productControllers.createProduct,
 );
-router.get('/', productControllers.getAllProduct);
+router.get('/:email', productControllers.getAllProduct);
 router.put(
   '/:productId',
   validateRequest(updateProductValidationSchema),
