@@ -42,8 +42,9 @@ export default function ProductModal({ fdata, task, children }) {
               duration: 3000,
             });
           }
-          reset();
           setIsOpen(false);
+          reset();
+          setPhotoURL(null);
         } catch (e) {
           console.log(e);
         }
